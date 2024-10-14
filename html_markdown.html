@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Project Title goes here</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="CSS/html_markdown.css">
+    </head>
+    <body class="markdown-body">
+        <div class="markdown-body">
+            <h1>README</h1>
+            <p>Provide a summary of the project that you are working on in this p-tag content. It is better if a link to the project can be provided which usually has this structure <span style='color:#00ABF0'>&lt;a href="https://ttiinc.atlassian.net/browse/BIJ-xxxx"&gt; [BIJ-xxxx] Project Name from Jira Story &lt;/a&gt;</span> provide  inside the html file.</p>
+            <h2>OVERVIEW</h2>
+            <p>This html file is acting as a markdown document that documents each completed project. Confluence should be used as it can make documenting much easier without having to deal with any html components. </p>
+            <p>This <code>legacy</code> documenting requires some basic html &amp; css knowledges, it will be best if front-end knowledges are equipped as this document can be fully dynamic with state change &amp; handling event. A css document named <code>JKChai-markdown.css</code> is provided for the styling to the html file. For those that would like to have a different styling for their own html documents shall create a new css file.</p>
+            <p>
+                <pre>
+                    <code>
+    Snippet of code should goes here using any html Syntax highlight formatters. Note that pre-tag predefined this section which spaces, tabs, & special characters are treated as raw TEXT elements rather than html elements except html entities
+    <a href="https://developer.mozilla.org/en-US/docs/Glossary/Entity">MDN Web Docs Glossary: Entity</a>.
+
+    For example:
+        8 spaces after
+                        6 4-space tabs after
+            & > < character            
+                    </code>
+                </pre>
+            </p>
+            <blockquote>Block quote can be provided with blockquote-tag for footnote information</blockquote>
+            <h2>ASSETS</h2>
+            <p>Videos &amp; images can be provided as shown below, and the size of this assets should be provided with the corresponding css file. Best practice other than Separation-Of-Concern is to have assets store in the same folder, e.g., css file stored in <code>./CSS/</code> and videos &amp; images resources stored in <code>./Assets/Resources/</code></p>
+            <div id="video-wrapper"> 
+                <video text-align="center" width=80% height=auto controls preload="metadata">
+                    <source src="Assets/Resources/example1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <br>
+            <p>More than one video example: </p>
+            <div id="video-wrapper"> 
+                <video id="home1" width="400" height=auto controls preload="metadata">
+                    <source src="Assets/Resources/example2.mp4" type="video/mp4">
+                </video>
+                <video id="home2" width="400" height=auto controls preload="metadata">
+                    <source src="Assets/Resources/example3.mp4" type="video/mp4">
+                </video>
+                <div class="clear"></div>
+            </div>
+            <br>
+            <p>Image example: </p>
+            <div>
+                <img src="Assets/Resources/example4.jpg" alt="Something here" width="80%" height=auto>
+            </div>
+            <h2>DOCUMENTATION</h2>
+            <h3 style="font-size: 1.5em;">Document title here with font-size increase in h3-tag</h3>
+            <ol type="doc">
+                <li>
+                    <p style="font-size: 1.25em;">Some title for component to be documented</p>
+                    <dl>
+                        <dt>.SYNOPSIS</dt>
+                        <dd>Here uses dl-tag for detailing some of the components</dd>
+                        <dt>.DESCRIPTION</dt>
+                        <dd>
+                            An example is presented below.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <p style="font-size: 1.25em;">Write-Log</p>
+                    <dl>
+                        <dt>.SYNOPSIS</dt>
+                        <dd>Log messaging function</dd>
+                        <dt>.DESCRIPTION</dt>
+                        <dd>
+                            Write log message to the specified file with date & log type.
+                            Both messages & log type are required for this function to work,
+                            where log type only accept INFO, ERROR, & DEBUG information.
+                            In addition, both $LogFullpath & $ScriptName identifies are required 
+                            to be declared & has to be defined in the Global scope. $LogFullpath
+                            is the variable name that consists of absolute path of the target log file
+                            while $ScriptName is the variable name that provides the script name when
+                            the script is invoked at runtime.
+                        </dd>
+                        <dt>.PARAMETER message</dt>
+                        <dd>
+                            Type: [String] <br>
+                            Information provided to log
+                        </dd>
+                        <dt>.PARAMETER level</dt>
+                        <dd>
+                            Field: [DEBUG|INFO|ERROR] <br>
+                            Type: [String] <br>
+                            Adopted from Python logging standards https://docs.python.org/3/howto/logging.html <br>
+                            INFO is used when the log message is log as part for informing purposes <br>
+                            ERROR is used when the code is deem to be broken and is normally used in try-catch block <br>
+                            DEBUG is used when the code is on debugging purposes to identify issues or for testing <br>                        
+                        </dd>
+                    </dl>
+                </li>
+            </ol>
+        <h3 style="font-size: 1.5em;">Other components can be added as well</h3>
+            <p>
+                <pre>
+                    <code>
+    pre-tag can be used to details the code block uses for the script
+                    </code>
+                </pre>
+            </p>
+            <h2>RECOMMENDATION</h2>
+            <ul>
+                <li>Some requirements that are needed for the process can be added here
+                    <ul>
+                        <li>Unordered list is used here, examples are shown below</li>
+                    </ul>
+                </li>
+                <li>Required PowerShell Versions 
+                    <ul>
+                        <li>WindowsPowerShell (&gt;= 5.1.0) or PowerShell Core (&gt;= 7.1.0)</li>
+                        <li>Note that WindowsPowerShell other than version 5.1.0 are deprecated &amp; only PowerShell Core version 7.1.0 &amp; newer are LTS </li>
+                    </ul>
+                </li>
+                <li>Required PowerShell Module
+                    <ul>
+                        <li>AzureAD (&gt; 2.0.2.140)</li>
+                        <li>ActiveDirectory (&gt; 1.0.1.0)</li>
+                    </ul>
+                </li>
+                <li>PowerShell working Session Behaviors
+                    <ul>
+                        <li>Unrestricted Process </li>
+                        <li>Non-Elevated Session</li>
+                        <li>Avoid Microsoft.PowerShell.Core\FileSystem::&lt;\\<server>\<shared>\<filepath>&gt; (i.e., avoid starting PowerShell session in Shared Drives)</li>
+                        <li>Network Security Protocol == Tls12</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>ISSUES</h2>
+            <h3>Any issues shall be detailed here</h3>
+            <p>More info can be included here</p>
+            <h2>CHANGES</h2>
+            <h3>Version x.x.x</h3>
+            <ul>
+                <li>For Script development, different versions including changes should be included here</li>
+                <li>This can help easily track different version changes and troubleshoot any bugs after newest update</li>
+            </ul>
+            <h2>RESOURCES</h2>
+            <ul>
+                <li>Any useful resources should be included here</li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML: HyperText Markup Language</a></li>
+                <li><a href="https://www.w3schools.com/html/">HTML Tutorial</a></li>
+            </ul>
+            <h2>Contact author/maintainer &#x1F601; for any feedbacks, issues, questions, and/or resolutions</h2>
+            <blockquote>
+                <p>Jin Kun Chai &#x1F680; JinKun.Chai@ttiinc.com</p>
+            </blockquote>
+            <h6>Intiated on 03/08/2023 by JinKun.Chai@ttiinc.com</h6>
+            <h6>Last Modified on 03/08/2023 by JinKun.Chai@ttiinc.com</h6>
+        </div>
+    </body>
+</html>
