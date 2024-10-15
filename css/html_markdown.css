@@ -838,6 +838,14 @@ Modified: 01/11/2024
   padding-right: 20px;
 }
 
+/* Added on 10/14/2024 for centering image */
+.img_center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
 .markdown-body .emoji {
   max-width: none;
   vertical-align: text-top;
